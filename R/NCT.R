@@ -169,7 +169,7 @@ NCT <- function(data1, data2, it = 100,
       if (is.character(edges)) {
         if(match.arg(adjust)=="none"){
           ept.HBall <- edges.pvaltemp
-        } else {ept.HBall <- p.adjust(edges.pvaltemp, method = martch.arg(adjust))}
+        } else {ept.HBall <- p.adjust(edges.pvaltemp, method = match.arg(adjust))}
         edges.pval.HBall[upper.tri(edges.pval.HBall, 
                                    diag = FALSE)] <- ept.HBall
         rownames(edges.pval.HBall) <- colnames(edges.pval.HBall) <- colnames(data1)
